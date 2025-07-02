@@ -1,0 +1,21 @@
+[tool.ruff]
+line-length = 79
+target-version = "py38" # It's good practice to define this for Ruff
+exclude = [
+    ".venv",
+    "__pycache__",
+    ".git",
+    "build",    # Common build directory
+    "dist",     # Common distribution directory
+    "*.pyc",    # Compiled Python files
+    "*.egg-info", # Python package metadata
+]
+fix = true
+
+[tool.ruff.lint]
+select = ["ALL"]
+
+[tool.mypy]
+strict = true
+ignore_missing_imports = true
+exclude = '(\.venv/|__pycache__/|\.git/|tests/)'
